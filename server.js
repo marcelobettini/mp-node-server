@@ -34,7 +34,7 @@ app.post('/create-preference', async (req, res) => {
         }
         const preference = new Preference(client)
         const result = await preference.create({ body })
-        console.log(result)
+        console.log('preference result en backend:', result)
         res.json({ id: result.id })
     } catch (err) {
         console.error(err.message)
